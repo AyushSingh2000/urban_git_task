@@ -5,7 +5,7 @@ import '../models/model.dart';
 class CommitDetailsPage extends StatelessWidget {
   final GitHubRepo repo;
 
-  CommitDetailsPage({required this.repo});
+  const CommitDetailsPage({super.key, required this.repo});
 
   @override
   Widget build(BuildContext context) {
@@ -20,17 +20,17 @@ class CommitDetailsPage extends StatelessWidget {
           children: [
             Text(
               'Repository: ${repo.name}',
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             Text(
               'Last Commit SHA: ${repo.lastCommitSha}',
-              style: TextStyle(fontSize: 16),
+              style: const TextStyle(fontSize: 16),
             ),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             Text(
               'Last Commit Message: ${repo.lastCommitMessage}',
-              style: TextStyle(fontSize: 16),
+              style: const TextStyle(fontSize: 16),
             ),
             // Add other relevant commit details
           ],
